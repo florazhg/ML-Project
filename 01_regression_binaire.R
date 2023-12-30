@@ -1,5 +1,7 @@
 ##### REGRESSION BINAIRE #####
 library(MASS)
+library(rpart)
+library(rpart.plot)
 
 ## Q1 : determiner le meilleur modele possible pour modeliser P(Y|X1,X2)
 
@@ -67,20 +69,19 @@ write.table(logit_predictions, "logit_predictions.txt", row.names = FALSE, col.n
 
 
 ---------------------------------------------
-# TEST ARBRE DE CLASSIFICATION #
+#### TEST ARBRE DE CLASSIFICATION ####
 tree <- rpart(Y ~ X1 + X2, data = simudf)
 printcp(tree)
 prp(tree)
 
-pred <- predict(tree, train.simu, type = "class")
+pred <- predict(tree, simu.test, type = "class")
 
 # creation du fichier qui contient les predictions par arbre de classification
-write.table(class_predictions, "class_predictions.txt", row.names = FALSE, col.names = FALSE)
+write.table(pred, "class_predictions.txt", row.names = FALSE, col.names = FALSE)
 
 
 ---------------------------------------------
 #### TEST RANDOM FOREST ####
-install.packages("randomForest")
 library(randomForest)
 
 set.seed(123)  # Pour avoir des resultats reproductibles
