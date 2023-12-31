@@ -54,6 +54,8 @@ voitures[4:5,]
 # oui car ils sont bien representes -> ce sont des grosses voitures
 
 ## (g) interpretez la representation graphique des individus
-# ...
-
-
+# le premier composant explique 69.37% de la variance des voitures
+# le deuxieme composant explique 19.38% de la variance des voitures 
+# Les individus comme Renaultcaptur, Renaultsclio, Fiat500 sont similaires et ont des acélération elevee avec une puissance et vitesse plutot faibles
+# --> ils se situent a proximité de la 2eme composante, donc fortement corrélée
+# les individus se situant en bas a droite du graphique comme Ferrari et Fordmustang, qui ont un profil semblable possède un cylindre? élevée avec une vitesse et émision de CO2 élevés
