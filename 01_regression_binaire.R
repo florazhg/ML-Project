@@ -31,6 +31,8 @@ summary(simudf.BIC)
 simudf.AIC <- stepAIC(simudf.logit,direction="both")
 summary(simudf.AIC)
 
+# on retrouve les memes resultats qu'en regression logistique
+
 ---------------------------------------------
 # regression logistique avec interaction #
 simudf.logit2 <- glm(Y ~ X1 + X2 + X1*X2, data = simudf, family = binomial())

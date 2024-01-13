@@ -19,6 +19,9 @@ km
 # 2 : les voitures de ville avec vitesses faibles, puissances faibles et consommant peu
 # 3 : les voitures de ville avec vitesses moyennes, puissances moyennes et consommant moyennement
 
+# 4 clusters
+km <- kmeans(voitures,4)
+km
 
 ## Q2 : faire une classification hierarchique avec la methode de "Ward". Interpretez le dendrogramme
 # en cb de classe aurait-on envie de couper ce graphique ?
